@@ -1,0 +1,48 @@
+==================
+hide drive
+==================
+
+hide - diskpart - list volume - select volume 1 - remove letter E
+
+unhide - assign letter E
+
+
+
+=================
+disable pendrive
+================
+
+regedit - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\USBSTOR  
+
+and then click -  start
+
+and change value 4
+
+=================
+write protect
+=================
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies
+
+and then click WriteProtect in the right pane and set value 0
+
+==================
+close my computer properties
+===================
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer 
+
+create dword
+
+and rename - NoPropertiesMyComputer
+
+and set 0 for properties
+
+and set 1 for no properties
+
+=======================
+remove all programme list
+======================
+
+type gpedit.msc - user configration - administrative templates - start menu and taskbar - Remove All programs list from the start menu
+
